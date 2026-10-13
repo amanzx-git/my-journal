@@ -1,0 +1,102 @@
+.post_details_page {
+    width: min(100% - 48px, 960px);
+    margin: 38px auto 0;
+    padding-bottom: 48px;
+}
+
+.post_details_card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #e7e6df;
+    border-radius: 28px;
+    box-shadow: 0 16px 40px rgba(42, 50, 43, 0.06);
+    overflow: hidden;
+}
+
+.post_details_header {
+    padding: 32px 32px 16px;
+}
+
+.post_details_kicker {
+    margin: 0 0 10px;
+    color: var(--color-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.post_details_header h1 {
+    margin: 0;
+    width: auto;
+    font-family: var(--font-display);
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+    line-height: 1.04;
+    letter-spacing: -0.06em;
+}
+
+.post_details_image_wrap {
+    width: 100%;
+    max-height: 420px;
+    overflow: hidden;
+}
+
+.post_details_image_wrap img {
+    display: block;
+    width: 100%;
+    height: clamp(260px, 38vw, 420px);
+    object-fit: cover;
+    background: var(--color-sage);
+}
+
+.post_details_meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    align-items: center;
+    padding: 20px 32px 28px;
+    color: var(--color-muted);
+    font-size: 0.95rem;
+}
+
+.post_details_meta address {
+    margin: 0;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-ink);
+}
+
+.post_details_meta div {
+    border-left: 1px solid #dfe3d6;
+    padding-left: 16px;
+}
+
+.post_details_content {
+    width: min(100%, 760px);
+    margin: 28px auto 0;
+    padding: 0 8px;
+}
+
+.post_details_content p {
+    margin: 0 0 1.3em;
+    font-size: 1.04rem;
+    line-height: 1.8;
+    color: rgba(41, 45, 42, 0.9);
+}
+
+@media (max-width: 600px) {
+    .post_details_page {
+        width: min(100% - 24px, 960px);
+        margin-top: 18px;
+    }
+
+    .post_details_header,
+    .post_details_meta {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .post_details_meta div {
+        border-left: none;
+        padding-left: 0;
+    }
+}

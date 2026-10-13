@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}<title>Home</title>{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static "blogs/index.css" %}">
+{% endblock css %}
+
+
+
+{% block content %}
+
+<section class="hero_page">
+    <div><img src="{% static "blogs/images/cat.png" %}" alt="Two cats relaxing together"></div>
+    <div><h1>Aman's Journal</h1></div>
+</section>
+
+<section class="post_page">
+    <h1>My Latest Thought</h1>
+
+    <ul>
+       {% for post in posts %}
+           {% include "blogs/include/part.html" %}
+       {% endfor %}
+    </ul>
+</section>
+
+<section class="about_page">
+        <h1>What I Do</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quae repudiandae saepe molestiae provident voluptas laudantium velit! Perspiciatis molestiae fugit ducimus voluptate rerum quae obcaecati vitae! Doloremque dicta tempora veniam.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi officia expedita magnam aut possimus. Esse exercitationem, animi impedit aut reprehenderit accusantium asperiores nostrum ex adipisci? Facere molestias quas velit ducimus.</p>
+
+</section>
+
+{% endblock content %}

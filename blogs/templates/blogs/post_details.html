@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}<title>{{ post.title }} | Details</title>{% endblock title %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'blogs/post_details.css' %}">
+{% endblock css %}
+
+{% block content %}
+<section class="post_details_page">
+    <article class="post_details_card">
+        <header class="post_details_header">
+            <p class="post_details_kicker">Journal entry</p>
+            <h1>{{ post.title }}</h1>
+        </header>
+
+        <div class="post_details_image_wrap">
+            <img src="{{ post.image }}" alt="{{ post.title }}">
+        </div>
+
+        <div class="post_details_meta">
+            <address>By {{ post.author }}</address>
+            <div>Published on <time datetime="{{ post.date|date:'Y-m-d' }}">{{ post.date|date:"F j, Y" }}</time></div>
+        </div>
+    </article>
+
+    <main class="post_details_content">
+        {{ post.content|linebreaks }}
+    </main>
+</section>
+{% endblock content %}
